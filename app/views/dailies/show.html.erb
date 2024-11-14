@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @daily %>
+
+<div>
+  <%= link_to "Edit this daily", edit_daily_path(@daily) %> |
+  <%= link_to "Back to dailies", dailies_path %>
+
+
+<h2>Comments</h2>
+<%= render @daily.comments %>
+
+<h2>Add a comment:</h2>
+<%= link_to "Add comment", new_daily_comment_path(@daily) %>
+
+  <%= button_to "Destroy this daily", @daily, method: :delete %>
+</div>
